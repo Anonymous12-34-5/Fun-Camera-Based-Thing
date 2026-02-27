@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Purple Vision</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- MediaPipe Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app-container">
+        <video id="input-video" playsinline></video>
+        <canvas id="output-canvas"></canvas>
+
+        <div id="ui-overlay">
+            <header>
+                <h1>Hollow Purple Vision</h1>
+                <p class="branding">by ved</p>
+                <p>Connect Red and Blue to manifest the Purple</p>
+            </header>
+
+            <div id="status-container">
+                <div class="status-item" id="left-hand-status">
+                    <span class="dot red"></span> Red: Left Hand
+                </div>
+                <div class="status-item" id="right-hand-status">
+                    <span class="dot blue"></span> Blue: Right Hand
+                </div>
+            </div>
+
+            <div id="instructions">
+                <p>Show your hands to the camera.</p>
+                <p>Use your <b>Index Fingers</b> to control the energy.</p>
+            </div>
+        </div>
+
+        <div id="loading-overlay">
+            <div class="loader"></div>
+            <p>Gathering Cursed Energy...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
